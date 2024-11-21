@@ -1,8 +1,7 @@
 export default function FoodItem ({food}) {
-    return <div>
-        <img src={food.image} alt="" />
-        <h1>{food.title}</h1>
-        <button className="px-4 py-3 bg-green-500 text-white my-3 rounded-md font-medium">View Recipe</button>
-    
+    return <div className="rounded-lg shadow-2xl w-[330px] overflow-hidden flex flex-col gap-3 p-4 m-4 justify-between">
+        <img src={food.image} alt="" className="rounded-lg h-auto w-full" />
+        <h1 className="text-red-700 font-medium ">{food.title}</h1>
+        <button className="px-4 py-3 bg-green-500 text-white rounded-md font-medium">View Recipe</button>    
     </div>
 }
