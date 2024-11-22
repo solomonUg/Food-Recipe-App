@@ -1,7 +1,7 @@
 import FoodItem from "./FoodItem";
 
-export default function FoodList ({foodData}){
-    return <div className="w-[90%] flex flex-wrap m-auto bg-slate-300">
-              {foodData.map((food)=><FoodItem key={food.id} food={food}/>)}
+export default function FoodList ({foodData, setFoodId}){
+    return <div className=" flex flex-wrap ">
+              {foodData.map((food)=><FoodItem key={food.id} food={food} setFoodId={setFoodId}/>)}
     </div>
 }

@@ -10,7 +10,9 @@ import DetailsFoodContainer from "./components/DetailsFoodContainer"
 function App() {
 
 
-  const [foodData, setFoodData] = useState ([])
+  const [foodData, setFoodData] = useState ([]);
+  const [foodId, setFoodId] = useState("715415")
+
   
   return (
       
@@ -20,10 +22,10 @@ function App() {
      <Search foodData={foodData} setFoodData={setFoodData}/>
      <Container>
       <InnerContainer>
-     <FoodList foodData={foodData} />
+     <FoodList foodData={foodData} setFoodId={setFoodId} />
       </InnerContainer>
       <InnerContainer>
-        <DetailsFoodContainer/>
+        <DetailsFoodContainer foodId = {foodId} />
       </InnerContainer>
      </Container>
       </div>
