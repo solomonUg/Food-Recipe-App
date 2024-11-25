@@ -22,9 +22,10 @@ export default function DetailsFoodContainer ({foodId}){
         <div>
             <h1 className="text-lg font-medium p-2">{food.title}</h1>
             <img src={food.image} alt="" />
-            <span className="flex items-center justify-center">
-            <FcAlarmClock />
-                {food.readyInMinutes}
+            <span className="flex float-start items-center justify-center gap-2 mt-3 ml-2 text-base text-black font-medium">
+            <FcAlarmClock  />
+                {food.readyInMinutes} Minutes
+                {/* {food.vegetarian? "Vegetarian": "non-vegetarian"} */}
             </span>
         </div>
          
