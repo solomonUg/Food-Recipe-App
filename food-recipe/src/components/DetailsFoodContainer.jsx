@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { FcAlarmClock } from "react-icons/fc";
 import { Lia500Px } from "react-icons/lia";
+import IngredientsList from "./IngredientsList";
 
 
 export default function DetailsFoodContainer ({foodId}){
@@ -33,11 +34,15 @@ export default function DetailsFoodContainer ({foodId}){
                <span className="text-black">${(food.pricePerServing/100).toFixed(2)}</span>
             </div>
             <div>
-              <h2>Instructions</h2>
-              {/* <div> 
-              {isLoading? <h1>Loading instructions...please wait</h1> : food.analyzedInstructions[0].steps.map((step)=><li>{step.step}</li>)}
-                 </div> */}
+              <h2 className="text-xl font-medium" >Ingredients</h2>
+                <IngredientsList food = {food}/>
             </div>
+            <div>
+              <h2 className="text-3xl">Instructions</h2>
+              <div> 
+              {isLoading? <h1>Loading instructions...please wait</h1> : food.analyzedInstructions[0].steps.map((step)=><li>{step.step}</li>)}
+                 </div> 
+                </div>
         </div>
          
         
