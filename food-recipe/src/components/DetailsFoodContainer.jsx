@@ -35,7 +35,7 @@ export default function DetailsFoodContainer ({foodId}){
             </div>
             <div>
               <h2 className="text-xl font-medium" >Ingredients</h2>
-                <IngredientsList food = {food}/>
+                <IngredientsList food = {food} isLoading={isLoading}/>
             </div>
             <div>
               <h2 className="text-3xl">Instructions</h2>
