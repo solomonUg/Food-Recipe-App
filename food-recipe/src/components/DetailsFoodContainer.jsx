@@ -22,29 +22,29 @@ export default function DetailsFoodContainer ({foodId}){
   }, [foodId])
    
     
-    return <div >
-        <div>
-            <h1 className="text-2xl font-medium p-2 my-4">{food.title}</h1>
+    return  <div className="shadow-lg p-6 w-full">
+            <h1 className="text-2xl font-medium text-[#3e4555]">{food.title}</h1>
+            <div className="rounded-xl">
             <img src={food.image} alt="" />
-            <div className="flex gap-2 mt-3 ml-2 text-base text-black font-medium">
-              <span className="flex items-center gap-2"><FcAlarmClock  />
+            </div>
+            <div className="flex gap-6 my-4 text-base text-black font-medium">
+              <span className="flex items-center justify-between"><FcAlarmClock  />
               {food.readyInMinutes} Minutes</span>
               <span>🍽️{food.servings}  Servings</span>
                <span>{food.vegetarian? "🥕Vegetarian": "🍖non-vegetarian"}</span> 
-               <span className="text-black">${(food.pricePerServing/100).toFixed(2)}</span>
             </div>
+               <div className="text-black mb-4">${(food.pricePerServing/100).toFixed(2)} Per Serving</div>
             <div>
-              <h2 className="text-xl font-medium" >Ingredients</h2>
+              <h2 className="text-2xl text-[#3e4555] font-medium mb-4" >Ingredients</h2>
                 <IngredientsList food = {food} isLoading={isLoading}/>
             </div>
             <div>
-              <h2 className="text-3xl">Instructions</h2>
+              <h2 className="text-3xl text-[#3e4555] font-medium">Instructions</h2>
               <div> 
+                <ol>
               {isLoading? <h1>Loading instructions...please wait</h1> : food.analyzedInstructions[0].steps.map((step)=><li>{step.step}</li>)}
+                </ol>
                  </div> 
                 </div>
-        </div>
-         
-        
-        </div>
+         </div>
 }

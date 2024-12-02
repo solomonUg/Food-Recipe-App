@@ -15,7 +15,7 @@ export default function Search({ foodData, setFoodData }) {
     }
     getFood();
   }, [query]);
-  console.log(foodData)
+  console.log(foodData);
   return (
     <div className="w-[30%] relative m-auto">
       <input
@@ -25,7 +25,7 @@ export default function Search({ foodData, setFoodData }) {
         className=" w-full h-10 rounded-lg pl-8 border-2 border-green-300 outline-none focus:text-green-900"
       />
       <div className="absolute top-2 left-2 ">
-        <IoSearch className="text-xl text-green-900"  />
+        <IoSearch className="text-xl text-green-900" />
       </div>
     </div>
   );
