@@ -15,7 +15,6 @@ export default function DetailsFoodContainer({ foodId }) {
       const response = await fetch(`${URL}?apiKey=${apiKey}`);
       const data = await response.json();
       setFood(data);
-      console.log(food);
       setIsLoading(false);
     }
     fetchFood();
@@ -27,7 +26,7 @@ export default function DetailsFoodContainer({ foodId }) {
       <div className="rounded-xl">
         <img src={food.image} alt="" />
       </div>
-      <div className="flex gap-6 my-4 text-base text-black font-medium">
+      <div className="flex flex-wrap gap-6 my-4 text-base text-black font-medium">
         <span className="flex items-center justify-between">
           <FcAlarmClock />
           {food.readyInMinutes} Minutes

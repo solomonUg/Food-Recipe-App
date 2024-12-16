@@ -15,7 +15,6 @@ export default function Search({ foodData, setFoodData }) {
     }
     getFood();
   }, [query]);
-  console.log(foodData);
   return (
     <div className="w-full sm:w-[30%] relative m-auto">
       <input
