@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const AsideContainer = () => {
+export const AsideContainer = ({children}) => {
   return (
-    <div>AsideContainer</div>
+    <div className='hidden lg:flex lg:w-[50%]'>{children}</div>
   )
 }

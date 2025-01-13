@@ -1,4 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 export default function FoodItem({ food, setFoodId }) {
+const navigate = useNavigate ();
+    function handleNav () {
+      navigate ()
+    }
+
   return (
     <div className="rounded-lg shadow-2xl w-[280px] overflow-hidden flex flex-col gap-3 p-4 mr-4  justify-between">
       <img src={food.image} alt="" className="rounded-lg h-auto w-full" />
