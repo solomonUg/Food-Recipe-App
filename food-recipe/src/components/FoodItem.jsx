@@ -7,7 +7,6 @@ export default function FoodItem({ food, setFoodId }) {
     
     const navigate = useNavigate ();
     function handleNav () {
-      console.log("Navigating with food:", food);
       navigate("/DetailsPageOnMobile", { state: { food } });
         }
 

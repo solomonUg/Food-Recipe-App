@@ -22,6 +22,7 @@ export default function Search({ foodData, setFoodData }) {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         className=" w-full h-10 rounded-lg pl-8 border-2 border-green-300 outline-none focus:text-green-900"
+        placeholder="Search your favourite food..."
       />
       <div className="absolute top-2 left-2 ">
         <IoSearch className="text-xl text-green-900" />
