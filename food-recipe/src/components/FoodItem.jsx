@@ -31,8 +31,8 @@ export default function FoodItem({ food, setFoodId }) {
 
 
   return (
-    <div className="rounded-lg shadow-2xl w-[280px] overflow-hidden flex flex-col gap-3 p-4 mr-4  justify-between">
-      <img src={food.image} alt="" className="rounded-lg h-auto w-full" />
+    <div className="rounded-lg shadow-2xl w-full sm:w-[280px] lg:w-[380px] overflow-hidden flex flex-col gap-3 p-4  justify-between ">
+      <img src={food.image} alt="" className="rounded-lg h-full w-full" />
       <h1 className="text-red-700 font-medium ">{food.title}</h1>
       <button
         onClick={() => handleClick() }
